@@ -1,0 +1,349 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.game {
+  min-height: 100vh;
+  overflow: hidden;
+  background-image: url(https://images.pexels.com/photos/5245865/pexels-photo-5245865.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260);
+  font-family: sans-serif;
+}
+.score {
+  color: rgb(224, 224, 224);
+  height: 20vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.title {
+  color: rgb(224, 224, 224);
+  height: 20vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  top: -100px;
+  padding: 20%;
+}
+.title h1 {
+  font-size: 50px;
+}
+.input-field {
+  max-width: 380px;
+  width: 500px;
+  background-color: #f0f0f0;
+  margin: 10px 0;
+  height: 55px;
+  border-radius: 55px;
+  display: grid;
+  grid-template-columns: 15% 85%;
+  padding: 0 0.4rem;
+  position: relative;
+  top: -50px;
+}
+
+.input-field i {
+  text-align: center;
+  line-height: 55px;
+  color: #acacac;
+  transition: 0.5s;
+  font-size: 1.1rem;
+}
+
+.input-field input {
+  background: none;
+  outline: none;
+  border: none;
+  line-height: 1;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.input-field input::placeholder {
+  color: #aaa;
+  font-weight: 500;
+}
+
+.storebtn {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 150px;
+  height: 50px;
+  background: none;
+  border: none;
+  color: rgb(224, 224, 224);
+  font-size: 20px;
+  background-color: #ff6f47;
+  border-radius: 3px;
+  cursor: pointer;
+  position: relative;
+  top: 30px;
+  left: 115px;
+}
+.score h1 {
+  font-size: 30px;
+}
+.score p {
+  text-align: center;
+  padding: 10px;
+  font-size: 25px;
+}
+.store {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.5s ease 0.5s;
+}
+.intro {
+  color: rgb(224, 224, 224);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  transition: opacity 0.5s ease;
+}
+.intro h1 {
+  font-size: 50px;
+}
+.button1 {
+  width: 150px;
+  height: 50px;
+  background: none;
+  border: none;
+  color: rgb(224, 224, 224);
+  font-size: 20px;
+  background-color: #ff6f47;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.button2 {
+  width: 150px;
+  height: 50px;
+  background: none;
+  border: none;
+  color: rgb(224, 224, 224);
+  font-size: 20px;
+  background-color: #ff6f47;
+  border-radius: 3px;
+
+  cursor: pointer;
+}
+.match button {
+  width: 150px;
+  height: 50px;
+  background: none;
+  border: none;
+  color: rgb(224, 224, 224);
+  font-size: 20px;
+  background-color: #ff6f47;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.match {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.5s ease 0.5s;
+}
+.winner {
+  color: rgb(224, 224, 224);
+  text-align: center;
+  font-size: 50px;
+}
+.hands,
+.options {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.play-hand {
+  transform: rotateY(180deg);
+}
+
+.group {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  transition: opacity 0.5s ease 0.5s;
+}
+.group h1 {
+  font-size: 50px;
+  position: absolute;
+  top: 150px;
+  color: rgb(224, 224, 224);
+}
+form {
+  min-height: 15vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  position: relative;
+  align-items: center;
+  top: 100px;
+}
+form .cute-btn,
+.cute-btn2 {
+  background: #ff6f47;
+  color: white;
+}
+form input {
+  padding: 0.5rem;
+  font-size: 2rem;
+  border: none;
+  background: white;
+  width: 300px;
+}
+form button {
+  padding: 0.5rem;
+  font-size: 2rem;
+  border: none;
+  background: #ff6f47;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+form button:hover {
+  background: #221f1e;
+  color: white;
+}
+.group-container {
+  position: relative;
+  top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.group-list {
+  min-width: 500px;
+  list-style: none;
+}
+
+.list {
+  margin: 0.5rem;
+  background: white;
+  color: black;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.detail {
+  margin: 0.5rem;
+  background: white;
+  color: black;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.list li {
+  flex: 1;
+}
+.detail li {
+  flex: 1;
+}
+.list-item {
+  padding: 0rem 0.5rem;
+}
+.detail-item {
+  padding: 0rem 0.5rem;
+}
+.detail-btn,
+.delete-btn,
+.check-btn {
+  background: #ff6f47;
+  color: white;
+  border: none;
+  padding: 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.detail-btn {
+  background: rgb(152, 66, 209);
+}
+.check-btn {
+  background: rgb(73, 204, 73);
+}
+div.fadeOut {
+  opacity: 0;
+  pointer-events: none;
+}
+div.fadeIn {
+  opacity: 1;
+  pointer-events: all;
+}
+.fa-trash,
+.fa-address-card {
+  pointer-events: none;
+}
+@keyframes shakePlayer {
+  0% {
+    transform: rotateY(180deg) translateY(0px);
+  }
+  15% {
+    transform: rotateY(180deg) translateY(-50px);
+  }
+  25% {
+    transform: rotateY(180deg) translateY(0px);
+  }
+  35% {
+    transform: rotateY(180deg) translateY(-50px);
+  }
+  50% {
+    transform: rotateY(180deg) translateY(0px);
+  }
+  65% {
+    transform: rotateY(180deg) translateY(-50px);
+  }
+  75% {
+    transform: rotateY(180deg) translateY(0px);
+  }
+  85% {
+    transform: rotateY(180deg) translateY(-50px);
+  }
+  100% {
+    transform: rotateY(180deg) translateY(0px);
+  }
+}
+@keyframes shakeComputer {
+  0% {
+    transform: translateY(0px);
+  }
+  15% {
+    transform: translateY(-50px);
+  }
+  25% {
+    transform: translateY(0px);
+  }
+  35% {
+    transform: translateY(-50px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  65% {
+    transform: translateY(-50px);
+  }
+  75% {
+    transform: translateY(0px);
+  }
+  85% {
+    transform: translateY(-50px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
