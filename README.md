@@ -1,2 +1,2 @@
-# webapp
+# CRUD demo
 javascript firebase
